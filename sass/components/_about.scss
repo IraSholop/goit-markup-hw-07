@@ -1,0 +1,42 @@
+// About
+.about {
+    @extend %container;
+    @extend %section;
+    padding-top: 0;
+  }
+  .about__subtitle {
+    @extend %subtitle;
+  }
+  .gallery-list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .gallery-list__item {
+    position: relative;
+  }
+  .gallery-list__descr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+  
+    background: rgba(47, 48, 58, 0.8);
+  }
+  .gallery-list__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: $additional-color;
+  }

@@ -1,0 +1,127 @@
+.portfolio{
+    @extend %container;
+    @extend %section;
+}
+.portfolio__title{
+    @extend %visually-hidden;
+}
+.filters {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .filters__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  .filters__btn {
+    padding: 6px 22px;
+    border: 0;
+    border-radius: 4px;
+  
+    background-color: $btn-color;
+    color: $secondary-color;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0.03em;
+    text-align: center;
+    cursor: pointer;
+  
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $additional-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .label{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .label__item {
+    @extend %list;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  
+    background-color: $additional-color;
+  
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:nth-child(3n) {
+        margin-right: 0;
+      }
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
+  }
+  .label__link {
+    text-decoration: none;
+    color: $primary-color;
+  }
+  .transform-link {
+    position: relative;
+    overflow: hidden;
+  }
+  .transform-link__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 63px 24px;
+  
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  
+    color: $additional-color;
+    background: rgba(33, 150, 243, 0.9);
+  
+    transform: translateY(295px);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .label__item:hover &,
+    .label__item:focus & {
+      transform: translateY(0);
+    }
+  }
+  .card {
+    padding: 18px 19px;
+    border: 1px solid #eeeeee;
+    border-top: 0;
+  }
+  .card__subtitle {
+    margin: 0;
+    margin-bottom: 4px;
+    color: $secondary-color;
+    font-size: 18px;
+    line-height: 2em;
+    letter-spacing: 0.06em;
+  }
+  .card__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9em;
+    letter-spacing: 0.03em;
+  }

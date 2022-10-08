@@ -1,0 +1,80 @@
+// Header 
+.page-header {
+    border-bottom: 1px solid #ececec;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1em;
+    letter-spacing: 0.02em;
+  }
+  .page-header__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+  }
+  .navigation__list {
+    @extend %list;
+    display: flex;
+  }
+  .page-header__list {
+    margin-left: 93px;
+  }
+  .page-header__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation__link {
+    @extend %link;
+    display: block;
+    color: $secondary-color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .navigation__link--mark {
+    color: $accent-color;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+    .navigation__item & {
+      position: relative;
+    }
+  }
+  .contact {
+    @extend %list;
+    display: flex;
+  }
+  .page-header__contact {
+    margin-left: auto;
+  }
+  .page-header__part:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contact__link {
+    @extend %link;
+    color: currentColor;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact__icon {
+    fill: currentColor;
+  
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  .page-header__icon {
+    margin-right: 10px;
+  }
